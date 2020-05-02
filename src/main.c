@@ -20,8 +20,6 @@
 #define DEVICE_NAME_LEN (sizeof(DEVICE_NAME) - 1)
 
 
-static volatile u8_t mfg_data[] = { 0x00, 0x00, 0xaa, 0xbb };
-
 static struct device* dev_si7021;
 
 static u8_t bTNotify;
@@ -128,10 +126,7 @@ void update_sensor_data()
             temp.val1, temp.val2, press.val1, press.val2,
             humidity.val1, humidity.val2);
 
-	mfg_data[2] = (uint8_t)temp.val1;
-	mfg_data[3] = (uint8_t)humidity.val1;
-
-	T_vals[0] = temp.val1;
+    T_vals[0] = temp.val1;
     T_vals[1] = temp.val2;
     H_vals[0] = humidity.val1;
     H_vals[1] = humidity.val2;
