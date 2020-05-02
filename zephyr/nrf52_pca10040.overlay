@@ -1,0 +1,10 @@
+&i2c0 {
+    status = "okay";
+	sda-pin = <26>;
+	scl-pin = <27>;
+    SI7006@40 {
+        compatible = "silabs,si7006";
+        label = "SI7006";
+        reg = <0x40>;
+    };
+};
