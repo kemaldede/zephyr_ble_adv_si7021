@@ -162,7 +162,7 @@ void main(void)
 		
 		// notify 
 		bt_gatt_notify(NULL, &th_svc.attrs[2], T_vals, sizeof(T_vals));
-        bt_gatt_notify(NULL, &th_svc.attrs[4], H_vals, sizeof(H_vals));
+        	bt_gatt_notify(NULL, &th_svc.attrs[4], H_vals, sizeof(H_vals));
 	}
 
 }
